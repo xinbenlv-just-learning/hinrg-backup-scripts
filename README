@@ -1,3 +1,10 @@
+[Project] HiNRG Backup Scripts
+[Source] Fork from Doug's repo https://github.com/carlsondc/rsync-incremental
+[Author] Zainan Victor Zhou <zzn@jhu.edu>
+[Description]:
+  NULL
+
+
 Scripts for automatically performing incremental backups with rsync.
 
 Setup:
