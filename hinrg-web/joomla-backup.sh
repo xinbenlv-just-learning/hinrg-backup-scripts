@@ -13,7 +13,7 @@ then
     lastFullName=$JOOMLA_DB_BKPDIR/$(cat $JOOMLA_DB_BKPDIR/last_full_name)
     echo "$(date +%s) last full: $lastFullName"
     mv $JOOMLA_DB_BKPDIR/current $JOOMLA_DB_BKPDIR/last
-    mysqldump --extended-insert=FALSE --user=joomla --password=none joomla > $JOOMLA_DB_BKPDIR/current
+    mysqldump --extended-insert=FALSE --user=$JOOMLA_DB_USER --password=$JOOMLA_DB_PASSWORD $JOOMLA_DB > $JOOMLA_DB_BKPDIR/current
 
     lastIndex=$(ls $lastFullName.* | cut -d '.' -f 2 | sort -g | tail -1)
     outputFile=$lastFullName.$(expr 1 + $lastIndex)
@@ -24,7 +24,7 @@ then
     echo "$(date +%s) start full $(date)"
     dateStr=$(date +%m-%d-%Y-%H-%M)
     tmpFile=jb.$RANDOM
-    mysqldump --extended-insert=FALSE --user=joomla --password=none joomla > $tmpFile
+    mysqldump --extended-insert=FALSE --user=$JOOMLA_DB_USER --password=$JOOMA_DB_PASSWORD $JOOMLA_DB > $tmpFile
     cp $tmpFile $JOOMLA_DB_BKPDIR/$dateStr.0
     mv $tmpFile $JOOMLA_DB_BKPDIR/current
 
