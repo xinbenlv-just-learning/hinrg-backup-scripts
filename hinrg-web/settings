@@ -40,3 +40,11 @@ fi
 #compute site root, current, and incremental
 REMOTE_SITE_ROOT=$REMOTE_ROOT/$SITE
 REMOTE_CUR=$REMOTE_SITE_ROOT/1.0
+
+#joomla database user
+JOOMLA_DB_USER=
+#joomal database password
+JOOMLA_DB_PASSWORD=
+
+#joomla database name
+JOOMLA_DB=

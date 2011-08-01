@@ -1,5 +1,6 @@
 #!/bin/sh
 
+#This script backups joomla database 
 backupDir=/home/backup-operator/local_backups/joomla_backups
 if [ "$1" == "-i" ]
 then
