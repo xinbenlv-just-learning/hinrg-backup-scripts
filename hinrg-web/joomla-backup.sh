@@ -24,7 +24,7 @@ then
     echo "$(date +%s) start full $(date)"
     dateStr=$(date +%m-%d-%Y-%H-%M)
     tmpFile=jb.$RANDOM
-    mysqldump --extended-insert=FALSE --user=$JOOMLA_DB_USER --password=$JOOMA_DB_PASSWORD $JOOMLA_DB > $tmpFile
+    mysqldump --extended-insert=FALSE --user=$JOOMLA_DB_USER --password=$JOOMLA_DB_PASSWORD $JOOMLA_DB > $tmpFile
     cp $tmpFile $JOOMLA_DB_BKPDIR/$dateStr.0
     mv $tmpFile $JOOMLA_DB_BKPDIR/current
 
