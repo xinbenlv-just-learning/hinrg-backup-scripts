@@ -1,5 +1,5 @@
 #location where backups are stored for all sites
-BACKUP_ROOT=~/ibackup
+BACKUP_ROOT=/home/backup-operator/ibackup
 
 #seconds per unit: e.g. 60 if units is minute
 elapsedSecondsPerUnit=$(expr 60 \* 60)

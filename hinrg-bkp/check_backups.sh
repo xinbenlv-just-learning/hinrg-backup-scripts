@@ -2,6 +2,12 @@
 settingsFile=$(dirname $0)/settings
 . $settingsFile
 
+LABEL=$(date +%Y-%m-%d-%H%M)
+ts=$(date +%s)
+
+echo "$LABEL START"
+
+
 nonEmptyVars=(BACKUP_ROOT elapsedSecondsPerUnit warnThresholdUnits warnThresholdSeconds)
 valid=1
 for varName in ${nonEmptyVars[*]}
@@ -39,9 +45,9 @@ do
         echo "$(basename $system) $unitsElapsed ($secondsElapsed s)"
     fi
 done
-echo ""
 echo "Disk usage"
 echo "----------"
 df -h
+echo "$LABEL FINISHED"
 echo ""
-echo "Check done."
+echo ""
