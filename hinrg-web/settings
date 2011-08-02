@@ -25,6 +25,14 @@ EXCLUDE_LIST="/dev/null"
 # want to keep a week, this should be 7.
 DEPTH_ONE_BACKUPS=7
 
+#remote rotate script
+REMOTE_ROTATE_SCRIPT="/home/$REMOTE_BACKUP_USER/hinrg-backup-scripts/hinrg-bkp/rotate.sh"
+
+#remote script to check lock
+REMOTE_CHECK_LOCK_SCRIPT="/home/$REMOTE_BACKUP_USER/hinrg-backup-scripts/hinrg-bkp/checkLock.sh"
+
+
+
 #-----computed variables below. These should not need to be modified----#
 #local passwordless SSH key
 LOCAL_SSH_KEY=/home/$LOCAL_BACKUP_USER/.ssh/id_rsa
